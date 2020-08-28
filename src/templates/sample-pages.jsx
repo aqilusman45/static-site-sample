@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { options } from "../utils/markdownOptions";
 
 const SamplePageTemplate = ({ data }) => {
   const {
@@ -14,8 +15,8 @@ const SamplePageTemplate = ({ data }) => {
     <Layout>
       <SEO title={heading} />
       <h1>{heading}</h1>
-      {documentToReactComponents(json, {})}
-      <Link to="/" >Home</Link>
+      {documentToReactComponents(json, options)}
+      <Link to="/">Home</Link>
     </Layout>
   )
 }
