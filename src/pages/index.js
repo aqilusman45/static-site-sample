@@ -17,12 +17,12 @@ const IndexPage = ({ data }) => {
             preview: { preview },
           } = page
           return (
-            <li key={heading}>
-              <div>
-                <h1>
+            <li key={heading} className="mb-12">
+              <div className="border .border-gray-900 rounded-lg p-3 bg-gray-100 font-sans">
+                <h1 className="font-mono mb-3 text-gray-800 border-b-2 border-gray-500">
                   <Link to={slug}>{heading}</Link>
                 </h1>
-                <p>{preview}</p>
+                <p className="text-gray-700 text-sm">{preview}</p>
               </div>
             </li>
           )
